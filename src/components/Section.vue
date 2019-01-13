@@ -1,29 +1,27 @@
 <template>
   <div class="section">
     <div class="section__introduction section__background-image">
-      <transition name="fade">
-        <div v-if="show">
-          <h1 class="section__greetings" v-if="show">Well hello there.</h1>
-        </div>
-      </transition>
-      <transition name="fade">
-        <div v-if="showSecond">
-          <p>I'm Ryan Bazzana.</p>
-          <p>I'm a full stack developer based out of Brisbane, Australia.</p>
-        </div>
-      </transition>
+      <div class="section__greetings">
+        <h1>Well hello there.</h1>
+        <transition name="fade" id="about">
+          <div v-if="showSecond">
+            <p>I'm Ryan Bazzana.</p>
+            <p>I'm a full stack developer based out of Brisbane, Australia.</p>
+          </div>
+        </transition>
+      </div>
     </div>
-    <div class="section__tech">
+    <div class="section__tech" id="tech">
       <h2>Tech I love</h2>
       <p>While I'm quite experienced in developing for wordpress, my interest lies in javascript, specifically Vue.js</p>
       <p>Heres some neat tech I use</p>
       <div class="icons">oodles of icons</div>
     </div>
-    <div class="section__interests">
+    <div class="section__interests" id="interests">
       <h2>CODE&&CARS&&CAMERAS&&COFFEE</h2>
       <p>When I'm not on my computer I like to spend time outdoors hiking, practicing photography or driving around twisty mountain roads (responsibly, of course).</p>
     </div>
-    <div class="section__contact">
+    <div class="section__contact" id="contact">
       <h2>You can find me on my various social channels, just click below.</h2>
       <div class="icons">GitHub</div>
       <div class="icons">Instagram</div>
@@ -36,8 +34,7 @@
 export default {
   data() {
     return {
-      show: false,
-      showSecond: false
+      showSecond: true
     };
   },
   methods: {
@@ -58,10 +55,44 @@ export default {
   height: 120vh;
   display: block;
   width: 100vw;
-  margin-top: 10vh;
   align-content: middle;
-  h1 {
-    text-align: left;
+  &__greetings {
+    margin-top: 25vw;
+
+    h1 {
+      position: relative;
+      top: 50%;
+      width: 250px;
+      margin: 0 auto;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+      font-size: 180%;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      background: #000;
+      @media screen and (min-width: 768px) {
+        transform: translateY(-75%);
+        animation: typewriter 1.3s steps(17) 1s 1 normal both,
+          blinkTextCursor 1s steps(17) infinite normal;
+
+        @keyframes typewriter {
+          from {
+            width: 0;
+          }
+          to {
+            width: 250px;
+          }
+        }
+        @keyframes blinkTextCursor {
+          from {
+            border-right-color: rgba(255, 255, 255, 0.75);
+          }
+          to {
+            border-right-color: transparent;
+          }
+        }
+      }
+    }
   }
   &__background-image {
     color: #fff;
