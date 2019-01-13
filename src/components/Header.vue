@@ -7,9 +7,6 @@
       <div class="header__right">
         <ul>
           <li>
-            <a href="#about">About me</a>
-          </li>
-          <li>
             <a href="#tech">Tech</a>
           </li>
           <li>
@@ -53,7 +50,8 @@ export default {
   left: 0;
   right: 0;
   width: 100%;
-  background: #75a68e;
+  background: none;
+  color: #fff;
 
   &__left {
     position: relative;
@@ -75,7 +73,15 @@ export default {
       margin: 0 10px;
     }
     a {
-      color: #000;
+      font-size: 22px;
+      color: #919191;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+        font-size: 24px;
+        text-decoration: underline;
+      }
     }
   }
 }
