@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header" :class="scrolled ? 'header--scrolled' : ''">
     <div class="header__left">
       <h1>Ryan Bazzana</h1>
     </div>
@@ -46,7 +46,7 @@ export default {
 <style lang="scss">
 .header {
   display: block;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -61,6 +61,10 @@ export default {
     width: 40%;
   }
   &__right {
+    position: relative;
+    height: 100%;
+    display: inline-block;
+    width: 60%;
     ul {
       list-style-type: none;
       padding: 0;
@@ -69,13 +73,16 @@ export default {
       display: inline-block;
       margin: 0 10px;
     }
-    position: relative;
-    height: 100%;
-    display: inline-block;
-    width: 60%;
     a {
       color: #000;
     }
   }
+}
+.header--scrolled {
+  position: fixed;
+  height: 75px;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 </style>
