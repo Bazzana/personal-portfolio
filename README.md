@@ -1,7 +1,4 @@
 # personal-portfolio
-<<<<<<< HEAD
-Personal portfolio built in Vue.js
-=======
 
 ## Project setup
 ```
@@ -27,7 +24,3 @@ yarn run test
 ```
 yarn run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> init
