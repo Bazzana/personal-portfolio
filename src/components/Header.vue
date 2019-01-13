@@ -1,25 +1,27 @@
 <template>
-  <div class="header" :class="scrolled ? 'header--scrolled' : ''">
-    <div class="header__left">
-      <h1>Ryan Bazzana</h1>
+  <transition name="heightChange">
+    <div class="header" :class="scrolled ? 'header--scrolled' : ''">
+      <div class="header__left">
+        <h1>Ryan Bazzana</h1>
+      </div>
+      <div class="header__right">
+        <ul>
+          <li>
+            <a href="#about">About me</a>
+          </li>
+          <li>
+            <a href="#tech">Tech</a>
+          </li>
+          <li>
+            <a href="#interests">Interests</a>
+          </li>
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="header__right">
-      <ul>
-        <li>
-          <a href="#about">About me</a>
-        </li>
-        <li>
-          <a href="#tech">Tech</a>
-        </li>
-        <li>
-          <a href="#interests">Interests</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -46,13 +48,12 @@ export default {
 <style lang="scss">
 .header {
   display: block;
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
   background: #75a68e;
-  height: 125px;
 
   &__left {
     position: relative;
@@ -84,5 +85,14 @@ export default {
   top: 0;
   left: 0;
   right: 0;
+}
+.heightChange-enter-active,
+.heightChange-leave-active {
+  transition: height 1s ease-in-out;
+  overflow: hidden;
+}
+.heightChange-enter,
+.heightChange-leave-to {
+  height: auto;
 }
 </style>
