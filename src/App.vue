@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Header/>
+    <Section/>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
+import Section from "./components/Section.vue";
 
 export default {
   name: "app",
   components: {
-    Header
+    Header,
+    Section
   }
 };
 </script>
@@ -22,6 +25,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
