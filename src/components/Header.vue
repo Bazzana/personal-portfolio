@@ -9,13 +9,13 @@
           <a href="#about">About me</a>
         </li>
         <li>
-          <a href="#about">Tech</a>
+          <a href="#tech">Tech</a>
         </li>
         <li>
-          <a href="#about">Interests</a>
+          <a href="#interests">Interests</a>
         </li>
         <li>
-          <a href="#about">Contact</a>
+          <a href="#contact">Contact</a>
         </li>
       </ul>
     </div>
