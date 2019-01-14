@@ -4,9 +4,12 @@
       <div class="section__greetings">
         <h1>Well hello there.</h1>
         <transition name="fade" id="about">
-          <div v-if="showSecond">
+          <div v-if="show">
             <p>I'm Ryan Bazzana.</p>
             <p>I'm a full stack developer based out of Brisbane, Australia.</p>
+            <a href="#tech">
+              <button class="button">></button>
+            </a>
           </div>
         </transition>
       </div>
@@ -18,7 +21,7 @@
       <div class="icons">oodles of icons</div>
     </div>
     <div class="section__interests" id="interests">
-      <h2>CODE&&CARS&&CAMERAS&&COFFEE</h2>
+      <h2>CODE</h2>
       <p>When I'm not on my computer I like to spend time outdoors hiking, practicing photography or driving around twisty mountain roads (responsibly, of course).</p>
     </div>
     <div class="section__contact" id="contact">
@@ -34,35 +37,31 @@
 export default {
   data() {
     return {
-      showSecond: true
+      show: false,
+      secondShow: false
     };
   },
-  methods: {
-    displayText() {
-      setTimeout(function() {
-        this.show = true;
-      }, 2000);
-    }
-  },
   mounted() {
-    this.displayText;
+    setTimeout(() => {
+      this.show = true;
+    }, 2750);
   }
 };
 </script>
 
 <style lang="scss">
 .section {
-  height: 120vh;
+  height: 100vh;
   display: block;
   width: 100vw;
   align-content: middle;
+
   &__greetings {
-    margin-top: 25vw;
+    margin-top: 30vh;
 
     h1 {
       position: relative;
-      top: 50%;
-      width: 250px;
+      max-width: 250px;
       margin: 0 auto;
       border-right: 2px solid rgba(255, 255, 255, 0.75);
       font-size: 180%;
@@ -70,26 +69,25 @@ export default {
       white-space: nowrap;
       overflow: hidden;
       background: #000;
-      @media screen and (min-width: 768px) {
-        transform: translateY(-75%);
-        animation: typewriter 1.3s steps(17) 1s 1 normal both,
-          blinkTextCursor 1s steps(17) infinite normal;
 
-        @keyframes typewriter {
-          from {
-            width: 0;
-          }
-          to {
-            width: 250px;
-          }
+      transform: translateY(-75%);
+      animation: typewriter 1.3s steps(17) 1s 1 normal both,
+        blinkTextCursor 1s steps(17) infinite normal;
+
+      @keyframes typewriter {
+        from {
+          max-width: 0;
         }
-        @keyframes blinkTextCursor {
-          from {
-            border-right-color: rgba(255, 255, 255, 0.75);
-          }
-          to {
-            border-right-color: transparent;
-          }
+        to {
+          max-width: 250px;
+        }
+      }
+      @keyframes blinkTextCursor {
+        from {
+          border-right-color: rgba(255, 255, 255, 0.75);
+        }
+        to {
+          border-right-color: transparent;
         }
       }
     }
@@ -110,12 +108,15 @@ export default {
     height: 50vh;
   }
 }
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
+.fade-enter-active {
+  transition: all 0.8s ease;
 }
-.fade-enter,
-.fade-leave-to {
+.fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.fade-enter, .fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(30px);
   opacity: 0;
 }
 </style>
