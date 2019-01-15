@@ -8,7 +8,7 @@
             <p>I'm Ryan Bazzana.</p>
             <p>I'm a full stack developer based out of Brisbane, Australia.</p>
             <a href="#tech">
-              <button class="button">></button>
+              <button class="section__button">Find out more</button>
             </a>
           </div>
         </transition>
@@ -53,7 +53,7 @@ export default {
 .section {
   height: 100vh;
   display: block;
-  width: 100vw;
+  width: 100%;
   align-content: middle;
 
   &__greetings {
@@ -95,7 +95,7 @@ export default {
   &__background-image {
     color: #fff;
     display: block;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
       (url("../assets/body-bg.jpg"));
@@ -106,6 +106,22 @@ export default {
   }
   &__section-overlay {
     height: 50vh;
+  }
+  &__button {
+    border: 1px solid white;
+    border-radius: 2px;
+    font-size: 20px;
+    padding: 10px 40px;
+    color: white;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 .fade-enter-active {
