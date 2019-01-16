@@ -1,6 +1,9 @@
 <template>
   <transition name="heightChange">
     <div class="header" :class="scrolled ? 'header--scrolled' : ''">
+      <div class="header__photo">
+        <img src>
+      </div>
       <div class="header__left">
         <h1>Ryan Bazzana</h1>
       </div>
@@ -44,42 +47,66 @@ export default {
 
 <style lang="scss">
 .header {
-  display: block;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  background: none;
-  color: #fff;
-
-  &__left {
-    position: relative;
-    height: 100%;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    z-index: 5;
+    div {
+      vertical-align: middle;
+    }
+  }
+  &__photo {
     display: inline-block;
-    width: 40%;
+    img {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0px;
+    }
+  }
+  &__left {
+    display: none;
+    @media screen and (min-width: 768px) {
+      position: relative;
+      height: 100%;
+      display: inline-block;
+      width: 25%;
+      text-align: left;
+      padding: 5px;
+    }
   }
   &__right {
     position: relative;
     height: 100%;
     display: inline-block;
-    width: 60%;
+    width: 40%;
     ul {
       list-style-type: none;
       padding: 0;
     }
     li {
       display: inline-block;
-      margin: 0 10px;
+      margin: 0px;
+      width: 33%;
     }
     a {
-      font-size: 22px;
+      font-size: 2vw;
       color: #919191;
       transition: all 0.3s ease;
       text-decoration: none;
       &:hover {
         color: #fff;
-        font-size: 24px;
+        font-size: 2vw;
         text-decoration: underline;
       }
     }
