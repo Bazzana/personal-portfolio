@@ -26,6 +26,9 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+div {
+  box-sizing: border-box;
+}
 html {
   scroll-behavior: smooth;
 }
