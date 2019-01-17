@@ -56,8 +56,18 @@ export default {
   width: 100%;
   align-content: middle;
 
+  &__border {
+    border-top: 1px solid #c8c8c8;
+    border-bottom: 1px solid #c8c8c8;
+  }
+
+  .section__grey {
+    background-color: #e8e8e8;
+  }
+
   &__greetings {
     margin-top: 30vh;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
 
     h1 {
       position: relative;
@@ -107,6 +117,52 @@ export default {
   &__section-overlay {
     height: 50vh;
   }
+  &__tech {
+    padding: 25px 10px;
+    text-align: left;
+    margin: 0 auto;
+    width: 85%;
+    vertical-align: text-top;
+
+    &--left {
+      display: inline-block;
+      margin: 0 auto;
+      width: 50%;
+      border-right: 5px inset #efefef;
+    }
+    &--right {
+      display: inline-block;
+      margin: 0 auto;
+      width: 50%;
+      svg {
+        max-width: 25%;
+      }
+    }
+  }
+
+  &__tech {
+    padding: 25px 10px;
+    text-align: left;
+    margin: 0 auto;
+    width: 85%;
+    vertical-align: text-top;
+
+    &--left {
+      display: inline-block;
+      margin: 0 auto;
+      width: 50%;
+      border-right: 5px inset #efefef;
+    }
+    &--right {
+      display: inline-block;
+      margin: 0 auto;
+      width: 50%;
+      svg {
+        max-width: 25%;
+      }
+    }
+  }
+
   &__button {
     border: 1px solid white;
     border-radius: 2px;
