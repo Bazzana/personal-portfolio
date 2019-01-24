@@ -171,6 +171,8 @@ export default {
 </script>
 
 <style lang="scss">
+$md: 768px;
+
 .section {
   height: 100vh;
   display: block;
@@ -200,7 +202,6 @@ export default {
       white-space: nowrap;
       overflow: hidden;
       background: #000;
-
       transform: translateY(-75%);
       animation: typewriter 1.3s steps(17) 1s 1 normal both,
         blinkTextCursor 1s steps(17) infinite normal;
@@ -234,6 +235,7 @@ export default {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
   &__section-overlay {
     height: 50vh;
@@ -246,17 +248,31 @@ export default {
     vertical-align: text-top;
 
     &--left {
-      display: inline-block;
+      display: block;
+      width: 100%;
+      text-align: left;
       margin: 0 auto;
-      width: 50%;
-      border-right: 5px inset #efefef;
+      @media (min-width: $md) {
+        display: inline-block;
+        width: 50%;
+        border-right: 5px inset #efefef;
+      }
     }
     &--right {
-      display: inline-block;
+      display: block;
+      width: 100%;
+      text-align: left;
       margin: 0 auto;
-      width: 50%;
+
       svg {
-        max-width: 25%;
+        width: 25%;
+      }
+      @media (min-width: $md) {
+        display: inline-block;
+        width: 50%;
+        svg {
+          max-width: 25%;
+        }
       }
     }
   }
