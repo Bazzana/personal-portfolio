@@ -349,7 +349,7 @@ $md: 768px;
   &__contact-icons {
     display: inline-block;
     width: 20%;
-    margin: 0px;
+    margin: 20px;
 
     svg {
       fill: rgb(53, 73, 94);
