@@ -234,7 +234,7 @@ $md: 768px;
     border-bottom: 1px solid #c8c8c8;
   }
 
-  .section__grey {
+  &__grey {
     background-color: #e8e8e8;
   }
 
