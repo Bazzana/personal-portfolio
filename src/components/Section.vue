@@ -6,7 +6,7 @@
         <transition name="fade">
           <div v-if="show">
             <p>I'm Ryan Bazzana.</p>
-            <p>I'm a full stack developer based out of Brisbane, Australia.</p>
+            <p>I'm a Front-end developer based out of Brisbane, Australia.</p>
             <a href="#tech">
               <button class="section__button">Find out more</button>
             </a>
@@ -17,7 +17,9 @@
     <div class="section__border section__tech" id="tech">
       <div class="section__tech section__tech--left">
         <h2>About me</h2>
-        <p>While I'm quite experienced in developing for wordpress, my interest lies in javascript, specifically Vue.js</p>
+        <p>While I'm primarily a front-end developer, I have experience with backend technology. Several of the projects I have worked on have required me to jump between both areas of development.</p>
+        <p>From Node.js microservices, to Laravel applications I have a range of experience across many modern technologies</p>
+        <p>My interest lies in javascript; specifically Vue.js.</p>
         <p>Heres some neat tech I use</p>
       </div>
       <div class="section__tech section__tech--right">
@@ -300,9 +302,10 @@ $md: 768px;
     &--left {
       display: block;
       width: 100%;
-      text-align: left;
+      text-align: center;
       margin: 0 auto;
       @media (min-width: $md) {
+        text-align: left;
         height: 100%;
         display: inline-block;
         width: 50%;
