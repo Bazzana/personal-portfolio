@@ -17,8 +17,8 @@
     <div class="section__border section__tech" id="tech">
       <div class="section__tech section__tech--left">
         <h2>About me</h2>
-        <p>While I'm primarily a front-end developer, I have experience with backend technology. Several of the projects I have worked on have required me to jump between both areas of development.</p>
-        <p>From Node.js microservices, to Laravel applications, to your basic (and not-so-basic) WordPress sites. I have a range of experience across many modern technologies.</p>
+        <p>While I consider myself a front-end developer, I have experience with backend technologies, and most of the projects I have worked on have required me to jump between both areas of development.</p>
+        <p>From Node.js microservices, to large-scale Laravel applications, to your basic (and not-so-basic) WordPress sites. I have a range of experience across many modern technologies.</p>
         <p>My main area of interest lies in javascript; specifically Vue.js.</p>
       </div>
       <div class="section__tech section__tech--right">
