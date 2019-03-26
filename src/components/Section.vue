@@ -406,12 +406,19 @@ $lg: 1024px;
     margin: 20px;
 
     svg {
+      transition: all 0.2s ease-in-out;
+
       fill: rgb(53, 73, 94);
       .cls-linkedin-original-1 {
         fill: rgb(53, 73, 94);
       }
       .cls-linkedin-original-2 {
         fill: #fff;
+      }
+      &:hover {
+        transform: scale(1.15);
+        font-weight: bold;
+        background: rgba(255, 255, 255, 0.1);
       }
     }
     @media (min-width: $md) {
