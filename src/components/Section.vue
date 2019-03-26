@@ -211,7 +211,7 @@
       </div>
 
       <div class="section__contact section__contact-icons">
-        <a href="mailto:ryan.bazzana@gmail.com">
+        <a href="mailto:hello@bazzana.dev">
           <svg
             version="1.1"
             id="Email"
