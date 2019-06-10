@@ -32,4 +32,7 @@ div {
 html {
   scroll-behavior: smooth;
 }
+.header {
+  display: none;
+}
 </style>
